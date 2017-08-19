@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+
+.App {
+  background-color: black;
+  text-align: center;
+  height: 100vh;
+}
+.header_container {
+  background-color: black;
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+.header_title {
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-size: 40px;
+  display: grid;
+  grid-area: 1 / 1;
+}
+.main_container {
+  background-color:black;
+  display: grid;
+  grid-template: 100px / 10% 80% 10%;
+}
+.search_holder {
+  background-color: black;
+  display: grid;
+  grid-area: 1 / 2 / span 1 / span 1;
+  grid-template: 1fr 1fr / 10% 80% 10%;
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 10px; 
+}
+.search_input {
+  background-color: white;
+  display: grid;
+  grid-area: 1 / 2 / span 1 / span 1;
+  border-radius: 25px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-family: 'Space Mono', monospace;
+  
+}
+.search_button {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-area: 2 / 2/ span 1 / span 1;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin-top: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+}
