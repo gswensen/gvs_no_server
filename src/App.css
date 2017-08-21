@@ -7,8 +7,8 @@
 }
 .header_container {
   background-color: black;
-  display: grid;
-  grid-template: 1fr / 1fr;
+   /* height: 100px;  */
+   display: grid; 
 }
 .header_title {
   color: white;
@@ -39,7 +39,7 @@
   border: 2px solid white;
   font-size: 20px;
   font-family: 'Space Mono', monospace;
-  
+
 }
 .search_button {
   background-color: black;
@@ -51,4 +51,9 @@
   margin-top: 5px;
   font-family: 'Space Mono', monospace;
   font-size: 20px;
+}
+.article_holder {
+  background-color: white;
+  display: grid;
+  grid-area: 3 / 2 / span 1 / span 1;
 }

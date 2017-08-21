@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import apiKey from './../news_api_key.js';
 
 class MainGrid extends Component {
+    
     constructor() {
         super();
         this.state = {
@@ -15,9 +17,12 @@ class MainGrid extends Component {
         })
     }
     search(term) {
-        axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json')
+        let source = 'the-new-york-times'
+        axios.get(`https://newsapi.org/v1/articles?source=the-new-york-times&sortBy=top&apiKey=c8615522df474a6ba7412fa0551ef7fd`)
         .then(response => {
-            console.log(response)
+
+            
+            console.log(response.data)
         })
     }
     render() {
@@ -25,8 +30,10 @@ class MainGrid extends Component {
             <div className='main_container'>
                 <span className='search_holder'>
                     <input className='search_input' onChange={(e)=> this.handleChange(e.target.value)}></input>
-                    <button className='search_button'>find...</button>
+                    <button className='search_button' onClick={()=> this.search()} >find...</button>
                 </span>
+                <div className='article_holder' >
+                </div>
             </div>
         )
     }
